@@ -1,587 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Keerthanaa Bollipalli | Data Scientist</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <style>
-    :root{
-      --navy:#0f2044;
-      --navy2:#162b5a;
-      --navy3:#1e3a7b;
-      --white:#ffffff;
-      --off-white:#f7f9fc;
-      --off-white2:#eef2f8;
-      --text:#1a2340;
-      --muted:#6b7a9a;
-      --border:#d6dff0;
-      --accent:#0f2044;
-    }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{background:var(--off-white);color:var(--text);font-family:'Outfit',sans-serif;overflow-x:hidden}
+<meta charset="utf-8">
+<meta name="theme-color" content="#2443C4">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keerthanaa Bollipalli | Data Scientist in Paris</title>
+<meta name="description" content="Keerthanaa Bollipalli is a Data Science and AI master’s student in Paris building reliable machine learning, NLP and generative AI projects.">
+<meta property="og:title" content="Keerthanaa Bollipalli | Data Scientist in Paris">
+<meta property="og:description" content="Machine learning, NLP and generative AI projects. MSc Data Science and AI, Data Science Tech Institute, Paris.">
+<meta property="og:image" content="keerthanaa-profile.jpeg">
+<script>try{var t=localStorage.getItem('theme')}catch(e){}document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAFBFF;--bg2:#F1F4FB;--ink:#0F1B3D;--mute:#56607F;--line:#DDE2F0;--cobalt:#2443C4;--cobaltlt:#2443C4;--acc:#D8412F;--soft:#2A3558;--dark:#0F1B3D;--nav:rgba(250,251,255,.9);--g1:#2443C4;--g2:#D8412F;--glow:rgba(36,67,196,.10);--grad:linear-gradient(120deg,#1E3AAE,#2A4CD0)}
+[data-theme=dark]{--bg:#0A1230;--bg2:#101A3D;--ink:#EEF1FB;--mute:#A3AED0;--line:#243055;--cobalt:#3556DB;--cobaltlt:#9DB4FF;--acc:#FF6B5A;--soft:#D6DCF2;--nav:rgba(10,18,48,.88);--g1:#7C97FF;--g2:#FF7A68;--glow:rgba(58,91,224,.22)}
+[data-theme=dark] .sec-title em{font-style:normal;color:var(--cobaltlt)}
+body,nav,.skills,.frame{transition:background-color .35s,color .35s,border-color .35s}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 19px/1.65 'Figtree',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:'Plus Jakarta Sans','Figtree',system-ui,sans-serif;font-weight:700;line-height:1.1;letter-spacing:-.025em}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--cobaltlt);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+section{padding:112px 0}
+.sec-title{font-size:clamp(2.1rem,4.4vw,3.3rem);margin-bottom:52px;max-width:20ch}
+.sec-title em{font-style:normal;color:var(--cobaltlt)}
 
-    /* NAV */
-    nav{
-      position:fixed;top:0;left:0;right:0;z-index:100;
-      display:flex;justify-content:space-between;align-items:center;
-      padding:1.2rem 5rem;
-      background:rgba(247,249,252,0.92);
-      backdrop-filter:blur(16px);
-      border-bottom:1px solid var(--border);
-    }
-    .nav-logo{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--navy);letter-spacing:0.01em}
-    .nav-links{display:flex;gap:2.2rem;list-style:none}
-    .nav-links a{
-      color:var(--muted);text-decoration:none;
-      font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;
-      transition:color 0.25s;
-    }
-    .nav-links a:hover{color:var(--navy)}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:var(--nav);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:'Plus Jakarta Sans','Figtree',system-ui,sans-serif;font-weight:700;font-size:1.2rem;letter-spacing:-.02em}
+.logo b{color:var(--acc)}
+nav ul{display:flex;gap:26px;list-style:none;font-size:1.02rem;color:var(--mute)}
+nav ul a:hover{color:var(--ink)}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:600;border:1.5px solid var(--ink);transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.fill{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+.btn.fill:hover{filter:brightness(1.1)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.btn.ico{width:50px;height:50px;padding:0;display:grid;place-items:center}
+.btn.ico svg{width:22px;height:22px;fill:currentColor}
+nav .btn{padding:9px 20px;font-size:.92rem}
+.navr{display:flex;align-items:center;gap:12px}
+.tgl{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:border-color .2s,transform .2s}
+.tgl:hover{border-color:var(--cobaltlt);transform:rotate(18deg)}
+.tgl svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.tgl .sun{display:none}[data-theme=dark] .tgl .sun{display:block}[data-theme=dark] .tgl .moon{display:none}
 
-    /* HERO */
-    #hero{
-      min-height:100vh;display:grid;grid-template-columns:1fr 1fr;
-      align-items:center;padding:7rem 5rem 4rem;gap:4rem;
-      background:var(--white);
-    }
-    .hero-left{}
-    .hero-tag{
-      display:inline-flex;align-items:center;gap:0.6rem;
-      font-size:0.67rem;letter-spacing:0.2em;text-transform:uppercase;
-      color:var(--navy2);background:var(--off-white2);
-      border:1px solid var(--border);
-      padding:0.4rem 1.1rem;margin-bottom:2rem;
-      animation:fadeUp 0.8s ease both;
-    }
-    .hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--navy);animation:pulse 2s infinite}
-    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
-    h1{
-      font-family:'DM Serif Display',serif;
-      font-size:clamp(3rem,5.5vw,5.2rem);
-      line-height:1.05;color:var(--navy);
-      animation:fadeUp 0.8s 0.1s ease both;
-    }
-    h1 em{font-style:italic;color:var(--navy3)}
-    .hero-sub{
-      margin-top:1.5rem;max-width:460px;
-      font-size:0.9rem;color:var(--muted);line-height:1.9;font-weight:300;
-      animation:fadeUp 0.8s 0.2s ease both;
-    }
-    .hero-cta{display:flex;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;animation:fadeUp 0.8s 0.3s ease both}
-    .btn{
-      padding:0.82rem 2rem;font-family:'Outfit',sans-serif;
-      font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;
-      text-decoration:none;cursor:pointer;transition:all 0.28s;
-    }
-    .btn-primary{background:var(--navy);color:white;border:2px solid var(--navy)}
-    .btn-primary:hover{background:var(--navy2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(15,32,68,0.2)}
-    .btn-outline{background:transparent;color:var(--navy);border:2px solid var(--navy)}
-    .btn-outline:hover{background:var(--navy);color:white;transform:translateY(-2px)}
+/* hero */
+.hero{position:relative;padding:72px 0 96px;overflow:hidden;background:radial-gradient(60% 70% at 78% 30%,var(--glow),transparent 70%)}
+#gl{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;color:var(--cobaltlt);font-size:.92rem;margin-bottom:28px;font-weight:500}
+.pill i{width:9px;height:9px;border-radius:50%;background:#5CF0A8;box-shadow:0 0 0 4px rgba(92,240,168,.2)}
+.hero h1{font-size:clamp(2.8rem,5.9vw,4.9rem);margin-bottom:28px}
+.hero h1 span{display:block}
+.hero h1 .l2{color:var(--cobaltlt)}
+.hero p.lead{font-size:1.35rem;color:var(--mute);max-width:34em;margin-bottom:34px}
+.hero p.lead b{color:var(--ink);font-weight:600}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.portrait:before{content:"";position:absolute;inset:20px -18px -18px 20px;border:1.5px solid var(--cobaltlt);border-radius:24px;opacity:.6}
+.portrait{position:relative;justify-self:center;width:min(100%,380px);transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s ease-out}
+.portrait .frame{position:relative;aspect-ratio:3/4;border-radius:24px;overflow:hidden;background:var(--bg2);border:1px solid var(--line)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+.portrait .tag{position:absolute;left:-28px;bottom:36px;z-index:2;background:#fff;color:#0E1A5C;padding:14px 20px;border-radius:14px;box-shadow:0 10px 30px rgba(15,27,61,.18)}
+.portrait .tag b{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:1.05rem}
+.portrait .tag small{color:#4C568F}
 
-    .hero-stats{
-      display:flex;gap:3rem;margin-top:3rem;padding-top:2rem;
-      border-top:1px solid var(--border);
-      animation:fadeUp 0.8s 0.4s ease both;
-    }
-    .stat-num{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--navy);line-height:1}
-    .stat-label{font-size:0.6rem;color:var(--muted);letter-spacing:0.14em;text-transform:uppercase;margin-top:0.2rem}
+/* marquee */
+.strip{background:transparent;border-block:1px solid var(--line);overflow:hidden;padding:20px 0}
+.strip div{display:flex;gap:48px;width:max-content;animation:slide 38s linear infinite;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:1.1rem;color:var(--mute)}
+.strip span:nth-child(even){color:var(--cobaltlt)}
+@keyframes slide{to{transform:translateX(-50%)}}
 
-    /* PHOTO */
-    .hero-right{display:flex;justify-content:center;align-items:center;animation:fadeUp 0.8s 0.2s ease both}
-    .photo-wrap{
-      position:relative;width:340px;height:440px;
-    }
-    .photo-wrap::before{
-      content:'';position:absolute;inset:-10px;
-      border:2px solid var(--border);
-      border-radius:16px;z-index:0;
-    }
-    .photo-wrap::after{
-      content:'Paris, France';
-      position:absolute;bottom:-1.8rem;right:0;
-      font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);
-    }
-    .photo-wrap img{
-      width:100%;height:100%;object-fit:cover;object-position:center top;
-      border-radius:12px;display:block;position:relative;z-index:1;
-      box-shadow:0 20px 60px rgba(15,32,68,0.15);
-    }
-    .photo-badge{
-      position:absolute;bottom:1.2rem;left:-1.5rem;z-index:2;
-      background:var(--navy);color:white;
-      padding:0.7rem 1.1rem;border-radius:10px;
-      box-shadow:0 8px 24px rgba(15,32,68,0.25);
-    }
-    .badge-title{font-size:0.7rem;font-weight:600;letter-spacing:0.05em}
-    .badge-sub{font-size:0.58rem;color:rgba(255,255,255,0.65);margin-top:0.1rem}
+/* about */
+.big{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;font-size:clamp(1.6rem,3.2vw,2.5rem);line-height:1.3;letter-spacing:-.015em;max-width:24em;margin-bottom:56px}
+.big strong{font-weight:600;color:var(--cobaltlt)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.facts p{color:var(--mute);margin-bottom:16px}
+dl{display:grid;grid-template-columns:auto 1fr;gap:0 28px}
+dt{color:var(--mute);padding:14px 0;border-top:1px solid var(--line)}
+dd{padding:14px 0;border-top:1px solid var(--line);font-weight:500}
+dd a:hover{color:var(--cobaltlt)}
 
-    /* SECTIONS */
-    section{padding:6rem 5rem;position:relative}
-    section:nth-child(even){background:var(--off-white)}
-    section:nth-child(odd){background:var(--white)}
-    .section-eyebrow{font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--navy3);margin-bottom:0.5rem;font-weight:600}
-    h2{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,4vw,3.5rem);color:var(--navy);margin-bottom:3rem;line-height:1.1}
-    h2 em{font-style:italic;color:var(--navy3)}
+/* skills */
+.skills{background:var(--bg2)}
+.row{display:grid;grid-template-columns:230px 1fr;gap:32px;padding:30px 0;border-top:1px solid var(--line);align-items:baseline}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row h3{font-size:1.5rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{padding:9px 20px;border-radius:999px;background:var(--bg);border:1px solid var(--line);font-size:1.02rem;transition:border-color .2s,color .2s}
+.chips span:hover{border-color:var(--cobaltlt);color:var(--cobaltlt)}
 
-    /* ABOUT */
-    #about .about-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:5rem;align-items:start}
-    .about-text p{font-size:0.9rem;line-height:2;color:var(--muted);margin-bottom:1.3rem;font-weight:300}
-    .detail-row{display:flex;gap:1.5rem;align-items:baseline;border-bottom:1px solid var(--border);padding:0.9rem 0}
-    .detail-key{font-size:0.58rem;color:var(--navy3);letter-spacing:0.16em;text-transform:uppercase;min-width:88px;font-weight:700}
-    .detail-val{font-size:0.8rem;color:var(--text);font-weight:400}
-    .detail-val a{color:var(--navy2);text-decoration:none;border-bottom:1px solid var(--border);transition:all 0.2s}
-    .detail-val a:hover{border-color:var(--navy);color:var(--navy)}
+/* experience timeline */
+.tl{position:relative;padding-left:44px;max-width:860px}
+.tl:before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--acc),var(--cobalt))}
+.job{position:relative;margin-bottom:56px}
+.job:last-child{margin-bottom:0}
+.job:before{content:"";position:absolute;left:-44px;top:8px;width:20px;height:20px;border-radius:50%;background:var(--bg);border:4px solid var(--cobalt)}
+.when{color:var(--cobaltlt);font-weight:600;margin-bottom:6px}
+.job h3{font-size:1.9rem;margin-bottom:4px}
+.job .org{color:var(--mute);margin-bottom:16px}
+.job li{margin:0 0 10px 18px;color:var(--soft)}
 
-    /* SKILLS */
-    #skills .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem}
-    .skill-card{
-      padding:1.6rem 1.2rem;border-radius:10px;
-      background:var(--white);border:1px solid var(--border);
-      transition:all 0.3s;cursor:default;
-    }
-    .skill-card:hover{border-color:var(--navy3);transform:translateY(-4px);box-shadow:0 12px 32px rgba(15,32,68,0.1)}
-    .skill-icon{font-size:1.4rem;margin-bottom:0.6rem}
-    .skill-name{font-size:0.76rem;color:var(--text);font-weight:600}
+/* projects */
+details.proj{border-top:1px solid var(--line)}
+details.proj:last-of-type{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:44px 0}
+summary::-webkit-details-marker{display:none}
+summary h3{font-size:clamp(1.8rem,4.5vw,3.5rem);transition:color .25s,transform .25s}
+summary:hover h3{color:var(--cobaltlt);transform:translateX(10px)}
+summary small{display:block;font-family:'Figtree',sans-serif;font-weight:500;font-size:1rem;letter-spacing:0;color:var(--mute);margin-top:12px}
+.plus{width:56px;height:56px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font-size:1.8rem;line-height:1;transition:transform .3s,background .3s}
+details[open] .plus{transform:rotate(45deg);background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+.pbody{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;padding:4px 0 48px}
+.pbody h4{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;color:var(--cobaltlt);margin-bottom:8px}
+.pbody p{color:var(--soft)}
+.pfoot{grid-column:1/-1;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.pfoot .chips span{background:transparent}
 
-    /* EP ITEMS */
-    .ep-item{
-      display:grid;grid-template-columns:200px 1fr;gap:0 4rem;
-      border-top:1px solid var(--border);padding:2.5rem 0;align-items:start;
-      transition:background 0.25s;border-radius:0;
-    }
-    .ep-item:hover{background:var(--off-white2);padding-left:1rem;padding-right:1rem;margin:0 -1rem;border-radius:8px}
-    .ep-date{font-size:0.62rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;font-weight:500;margin-bottom:0.3rem}
-    .ep-company{font-size:0.74rem;color:var(--navy3);font-weight:500;line-height:1.6}
-    .ep-title{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--navy);margin-bottom:0.7rem;line-height:1.2}
-    .ep-desc{font-size:0.82rem;color:var(--muted);line-height:1.9;font-weight:300}
-    .ep-bullets{list-style:none;margin-top:0.5rem}
-    .ep-bullets li{font-size:0.8rem;color:var(--muted);line-height:1.9;padding-left:1.3rem;position:relative;font-weight:300}
-    .ep-bullets li::before{content:'→';position:absolute;left:0;color:var(--navy3)}
-    .ep-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
-    .tag{font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;background:var(--off-white2);border:1px solid var(--border);color:var(--navy2);font-weight:600;border-radius:4px;transition:all 0.2s}
-    .tag:hover{background:var(--navy);color:white;border-color:var(--navy)}
+/* publication: inverted block */
+.pub{background:var(--bg);color:var(--ink);border-top:1px solid var(--line)}
+.pub .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.pub h2{font-size:clamp(2.1rem,4.4vw,3.3rem)}
+.pub .meta{color:var(--mute);margin-top:18px}
+.pub h3{font-size:clamp(1.5rem,2.8vw,2.1rem);line-height:1.15;margin-bottom:18px}
+.pub p{color:var(--soft);margin-bottom:26px}
+.pub .btn{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+.pub .btn:hover{filter:brightness(1.1)}
 
-    /* EDU */
-    .edu-item{display:grid;grid-template-columns:180px 1fr;gap:0 4rem;border-top:1px solid var(--border);padding:1.8rem 0;align-items:start}
-    .edu-date-col{font-size:0.6rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;font-weight:500;padding-top:0.3rem}
-    .edu-degree{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--navy);margin-bottom:0.25rem}
-    .edu-school{font-size:0.78rem;color:var(--navy3);font-weight:500}
-    .edu-loc{font-size:0.66rem;color:var(--muted);margin-top:0.15rem}
+/* credentials */
+.cred{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.cred a{display:block;transition:background .2s;padding:30px 26px;border-right:1px solid var(--line)}
+.cred a:last-child{border-right:0}
+.cred b{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;line-height:1.2;margin:12px 0 10px}
+.cred small{color:var(--mute);font-size:.95rem}
+.cred a:hover{background:var(--bg2)}
+.cred .view{display:inline-block;margin-top:18px;font-weight:600;color:var(--cobaltlt)}
+.cred .org{color:var(--cobaltlt);font-weight:600;font-size:.95rem}
 
-    /* CERTS */
-    .cert-item{
-      display:flex;align-items:center;gap:2rem;
-      border-top:1px solid var(--border);padding:1.6rem 0;transition:padding 0.25s;
-    }
-    .cert-item:hover{padding-left:1rem}
-    .cert-num{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--border);min-width:40px}
-    .cert-icon{
-      width:44px;height:44px;border-radius:10px;
-      background:var(--navy);color:white;
-      display:flex;align-items:center;justify-content:center;
-      font-size:1.1rem;flex-shrink:0;
-    }
-    .cert-name{font-size:0.92rem;color:var(--navy);font-weight:600;margin-bottom:0.2rem}
-    .cert-status{font-size:0.6rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;font-weight:500}
-    .cert-status.done{color:var(--navy3)}
+/* education */
+.edu{display:grid;gap:0}
+.edu div{display:grid;grid-template-columns:200px 1fr auto;gap:28px;padding:26px 0;border-top:1px solid var(--line);align-items:baseline}
+.edu div:last-child{border-bottom:1px solid var(--line)}
+.edu .when{margin:0;color:var(--cobaltlt)}
+.edu b{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.4rem}
+.edu span{color:var(--mute)}
 
-    /* CONTACT */
-    #contact{text-align:center}
-    .contact-sub{font-size:0.88rem;color:var(--muted);max-width:460px;margin:0 auto 3rem;line-height:1.9;font-weight:300}
-    .contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:860px;margin:0 auto 3rem}
-    .contact-cell{
-      display:flex;flex-direction:column;align-items:center;gap:0.5rem;
-      padding:2rem 1rem;text-decoration:none;color:var(--text);
-      border:1px solid var(--border);border-radius:12px;
-      background:var(--white);transition:all 0.3s;
-    }
-    .contact-cell:hover{background:var(--navy);color:white;border-color:var(--navy);transform:translateY(-4px);box-shadow:0 12px 32px rgba(15,32,68,0.18)}
-    .cc-icon{
-      width:42px;height:42px;border-radius:10px;
-      background:var(--off-white2);display:flex;align-items:center;justify-content:center;
-      font-size:1.2rem;transition:background 0.3s;
-    }
-    .contact-cell:hover .cc-icon{background:rgba(255,255,255,0.15)}
-    .cc-label{font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700}
-    .cc-value{font-size:0.68rem;font-weight:400;opacity:0.75}
+/* contact */
+.contact{background:var(--grad);color:#fff;text-align:center}
+.contact .btn{border-color:#fff}
+.contact .btn.fill{background:#fff;border-color:#fff;color:#1E3AAE}
+.contact .btn.fill:hover{background:#E6ECFF;border-color:#E6ECFF}
+.contact .btn.ghost:hover{background:#fff;color:var(--cobalt)}
+.contact .sec-title em{color:#CFDAFF;background:none;padding:0}
+.contact .sec-title{max-width:none;margin-inline:auto}
+.mail{display:inline-block;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:clamp(1.3rem,4vw,3.1rem);letter-spacing:-.02em;border-bottom:4px solid #CFDAFF;padding-bottom:6px;transition:color .2s;word-break:break-all}
+.mail:hover{color:#CFDAFF}
+.socials{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:44px 0 0}
+footer{padding:28px 0;color:var(--mute);font-size:.92rem;text-align:center;border-top:1px solid var(--line)}
 
-    footer{text-align:center;padding:2rem 5rem;font-size:0.6rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;border-top:1px solid var(--border);background:var(--white)}
-
-    /* PROGRESS */
-    #progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--navy);z-index:200;width:0%;transition:width 0.1s}
-
-    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.65s ease,transform 0.65s ease}
-    .reveal.visible{opacity:1;transform:translateY(0)}
-
-    @media(max-width:900px){
-      nav{padding:1rem 1.5rem}
-      .nav-links{display:none}
-      #hero{grid-template-columns:1fr;padding:7rem 1.5rem 4rem}
-      .hero-right{display:none}
-      section{padding:4.5rem 1.5rem}
-      #about .about-grid,.ep-item,.edu-item{grid-template-columns:1fr;gap:1rem}
-      .contact-grid{grid-template-columns:1fr 1fr}
-    }
-
-    .section-intro{max-width:680px;margin:-1.8rem 0 2rem;color:var(--muted);font-size:.82rem;line-height:1.8}
-    .section-intro code{font-size:.78rem;background:var(--off-white2);padding:.15rem .35rem;border-radius:4px}
-    .skill-icon{font-size:.82rem;font-weight:700;letter-spacing:.02em;color:var(--navy3);width:2.25rem;height:2.25rem;border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem;background:var(--off-white)}
-    .cert-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
-    .cert-card{display:flex;align-items:center;gap:1.1rem;text-align:left;width:100%;padding:1.4rem;background:var(--white);border:1px solid var(--border);border-radius:12px;color:var(--text);font:inherit;cursor:pointer;transition:transform .25s,border-color .25s,box-shadow .25s}
-    .cert-card:hover,.cert-card:focus-visible{transform:translateY(-3px);border-color:var(--navy3);box-shadow:0 12px 28px rgba(15,32,68,.09);outline:none}
-    .cert-card-static{cursor:default}
-    .cert-card-static:hover{transform:none;box-shadow:none;border-color:var(--border)}
-    .cert-mark{width:48px;height:48px;flex:0 0 48px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:var(--off-white2);border:1px solid var(--border);color:var(--navy);font-size:.8rem;font-weight:700;letter-spacing:.02em}
-    .cert-copy{display:flex;flex-direction:column;gap:.28rem;min-width:0}
-    .cert-name{font-size:.88rem;line-height:1.45}
-    .cert-provider{font-size:.7rem;color:var(--muted);line-height:1.5}
-    .cert-action{font-size:.68rem;color:var(--navy3);font-weight:600;margin-top:.2rem}
-    .cert-muted{color:var(--muted);font-weight:400}
-    .publication-card{max-width:900px;border:1px solid var(--border);border-radius:14px;background:var(--off-white);padding:2rem}
-    .publication-meta{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--navy3);font-weight:600;margin-bottom:1rem}
-    .publication-card h3{font-family:'DM Serif Display',serif;font-size:clamp(1.25rem,2.5vw,1.8rem);line-height:1.35;color:var(--navy);max-width:740px}
-    .publication-card p{margin-top:1rem;color:var(--muted);font-size:.85rem;line-height:1.8;max-width:700px}
-    .publication-actions{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-top:1.5rem}
-    .publication-id{font-size:.68rem;color:var(--muted)}
-    .contact-cell .cc-icon{font-size:.75rem;font-weight:700;color:var(--navy);letter-spacing:.04em}
-    .cert-modal{position:fixed;inset:0;z-index:500;display:none;align-items:center;justify-content:center;padding:1.25rem;background:rgba(9,19,42,.72)}
-    .cert-modal.open{display:flex}
-    .cert-modal-panel{position:relative;width:min(900px,100%);max-height:90vh;overflow:auto;background:white;border-radius:16px;padding:1.5rem;box-shadow:0 24px 80px rgba(0,0,0,.25)}
-    .cert-modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem}
-    .cert-modal-title{font-family:'DM Serif Display',serif;color:var(--navy);font-size:1.45rem;line-height:1.3}
-    .cert-modal-provider{font-size:.75rem;color:var(--muted);margin-top:.3rem}
-    .cert-modal-close{border:1px solid var(--border);background:var(--off-white);color:var(--navy);width:38px;height:38px;border-radius:8px;cursor:pointer;font-size:1.2rem;flex-shrink:0}
-    .cert-modal-image{display:block;width:100%;max-height:68vh;object-fit:contain;background:var(--off-white);border:1px solid var(--border);border-radius:8px}
-    .cert-modal-placeholder{display:none;padding:3rem 1.5rem;text-align:center;border:1px dashed var(--border);border-radius:8px;background:var(--off-white);color:var(--muted);font-size:.85rem;line-height:1.8}
-    .cert-modal-placeholder strong{display:block;color:var(--navy);margin-bottom:.5rem}
-    @media(max-width:700px){.cert-grid{grid-template-columns:1fr}.publication-card{padding:1.3rem}.cert-card{padding:1rem}.cert-modal-panel{padding:1rem}}
-
-  
-    /* Subtle animated network background */
-    #network-bg {
-      position: fixed; inset: 0; width: 100%; height: 100%;
-      z-index: 0; pointer-events: none; opacity: .24;
-    }
-    body > *:not(#network-bg) { position: relative; z-index: 1; }
-    @media (prefers-reduced-motion: reduce) {
-      #network-bg { display: none; }
-    }
-
-  
-    button{font:inherit;cursor:pointer}
-  </style>
+@media(max-width:900px){
+ nav ul{display:none}
+ .hero .wrap,.facts,.pub .wrap,.pbody{grid-template-columns:1fr}
+ .portrait{order:-1;width:min(70%,300px)}
+ .row{grid-template-columns:1fr;gap:14px}
+ .cred{grid-template-columns:1fr 1fr}
+ .cred a{border-bottom:1px solid var(--line)}
+ .edu div{grid-template-columns:1fr;gap:4px}
+ section{padding:80px 0}
+}
+@media(max-width:520px){.cred{grid-template-columns:1fr}.cred a{border-right:0}}
+@media(prefers-reduced-motion:reduce){.portrait{transform:none}.strip div{animation:none}html{scroll-behavior:auto}*{transition:none!important}}
+</style>
 </head>
 <body>
-  <canvas id="network-bg" aria-hidden="true"></canvas>
-  <div id="progress-bar"></div>
 
-  <nav>
-    <div class="nav-logo">Keerthanaa Bollipalli</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#publications">Publication</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<nav><div class="wrap">
+  <a href="#top" class="logo">Keerthanaa<b>.</b></a>
+  <ul>
+    <li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#research">Research</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="navr"><button class="tgl" id="tgl" aria-label="Switch between light and dark mode"><svg class="moon" viewBox="0 0 24 24"><path d="M21 13.2A8.5 8.5 0 1 1 10.8 3a7 7 0 0 0 10.2 10.2z"/></svg><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><a class="btn fill" href="Keerthanaa_Bollipalli_CV.pdf" download>Download CV</a></div>
+</div></nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-left">
-      <h1>Keerthanaa<br><em>Bollipalli</em></h1>
-      <p class="hero-sub">Master’s student in Data Science and AI at DSTI Paris, with a Computer Science background and hands-on experience in data analysis, machine learning, and AI-driven projects. Interested in building reliable, data-informed solutions.</p>
-      <div class="hero-cta">
-        <button type="button" class="btn btn-primary" id="seeProjectsBtn">See My Projects</button>
-        <a href="#contact" class="btn btn-outline">Get In Touch</a>
-        <a href="Keerthanaa_Bollipalli_CV.pdf" download="Keerthanaa_Bollipalli_Resume.pdf" class="btn btn-outline">Download CV ↓</a>
-      </div>
-      <div class="hero-stats">
-        <div><div class="stat-num">3+</div><div class="stat-label">Projects</div></div>
-        <div><div class="stat-num">2</div><div class="stat-label">Internships</div></div>
-        <div><div class="stat-num">Paris</div><div class="stat-label">Based In</div></div>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="photo-wrap">
-        <img src="profile-photo.png" alt="Keerthanaa Bollipalli"/>
-        <div class="photo-badge">
-          <div class="badge-title">Junior Data Scientist</div>
-          <div class="badge-sub">DSTI Paris · MSc AI</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<header class="hero" id="top"><canvas id="gl" aria-hidden="true"></canvas><div class="wrap">
+  <div>
+    <div class="pill"><i></i>Open to data science, ML and GenAI roles in Paris</div>
+    <h1 aria-label="Keerthanaa Bollipalli"><span id="n1">Keerthanaa</span><span class="l2" id="n2">Bollipalli</span></h1>
+    <p class="lead"><b>I turn messy data into models people can trust.</b> Master’s student in Data Science and AI at Data Science Tech Institute in Paris, with a computer science background and a habit of testing every result twice.</p>
+    <div class="cta"><a class="btn fill" href="#projects">See my projects</a><a class="btn ghost" href="#contact">Get in touch</a><a class="btn ghost ico" href="https://linkedin.com/in/keerthanaa-bollipalli/" target="_blank" rel="noopener" aria-label="Keerthanaa on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v5.45h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4v-11z"/></svg></a></div>
+  </div>
+  <div class="portrait">
+    <div class="frame"><img src="keerthanaa-profile.jpeg" alt="Portrait of Keerthanaa Bollipalli"></div>
+    <div class="tag"><b>MSc Data Science and AI</b><small>Data Science Tech Institute, Paris</small></div>
+  </div>
+</div></header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <p class="section-eyebrow reveal">01 — About</p>
-    <h2 class="reveal">Who I <em>Am</em></h2>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>I'm a Junior Data Scientist with a strong foundation in machine learning, deep learning, and data engineering. Currently pursuing my Master's in Data Science and AI at the Data ScienceTech Institute in Paris, I bridge academic rigour with hands-on real-world experience.</p>
-        <p>I work with Python, SQL, Pandas, NumPy, and Scikit-learn across data preprocessing, feature engineering, classification, and model evaluation. My projects include cyberattack detection and NLP-based fake account prediction.</p>
-        <p>I am also developing my skills in Generative AI, large language models, prompt engineering, and agentic AI systems. I enjoy turning complex problems into practical, well-evaluated solutions.</p>
-        <a href="Keerthanaa_Bollipalli_CV.pdf" download="Keerthanaa_Bollipalli_Resume.pdf" class="btn btn-outline" style="margin-top:1.5rem;display:inline-flex">Download Resume ↓</a>
-      </div>
-      <div class="about-details reveal">
-        <div class="detail-row"><span class="detail-key">Location</span><span class="detail-val">Paris, France</span></div>
-        <div class="detail-row"><span class="detail-key">Email</span><span class="detail-val"><a href="mailto:keerthanaabnaidu@gmail.com">keerthanaabnaidu@gmail.com</a></span></div>
-        <div class="detail-row"><span class="detail-key">Phone</span><span class="detail-val">+33 0749059131</span></div>
-        <div class="detail-row"><span class="detail-key">LinkedIn</span><span class="detail-val"><a href="https://linkedin.com/in/keerthanaa-bollipalli/" target="_blank">keerthanaa-bollipalli</a></span></div>
-        <div class="detail-row"><span class="detail-key">GitHub</span><span class="detail-val"><a href="https://github.com/keerthanaab2607" target="_blank">keerthanaab2607</a></span></div>
-        <div class="detail-row"><span class="detail-key">Languages</span><span class="detail-val">English · French (B1 Level)</span></div>
-        <div class="detail-row"><span class="detail-key">Focus</span><span class="detail-val">Data Science · Machine Learning · Generative AI</span></div>
-      </div>
-    </div>
-  </section>
+<div class="strip" aria-hidden="true"><div>
+  <span>Python</span><span>SQL</span><span>Machine learning</span><span>NLP</span><span>Generative AI</span><span>AI agents</span><span>Feature engineering</span><span>Model evaluation</span>
+  <span>Python</span><span>SQL</span><span>Machine learning</span><span>NLP</span><span>Generative AI</span><span>AI agents</span><span>Feature engineering</span><span>Model evaluation</span>
+</div></div>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <p class="section-eyebrow reveal">02 — Skills</p>
-    <h2 class="reveal">Technical <em>Toolkit</em></h2>
-    <div class="skills-grid reveal">
-      <div class="skill-card"><div class="skill-icon">Py</div><div class="skill-name">Python</div></div>
-      <div class="skill-card"><div class="skill-icon">SQL</div><div class="skill-name">SQL</div></div>
-      <div class="skill-card"><div class="skill-icon">Pd</div><div class="skill-name">Pandas & NumPy</div></div>
-      <div class="skill-card"><div class="skill-icon">ML</div><div class="skill-name">Machine Learning</div></div>
-      <div class="skill-card"><div class="skill-icon">SK</div><div class="skill-name">Scikit-learn</div></div>
-      <div class="skill-card"><div class="skill-icon">NLP</div><div class="skill-name">NLP & TF-IDF</div></div>
-      <div class="skill-card"><div class="skill-icon">FE</div><div class="skill-name">Feature Engineering</div></div>
-      <div class="skill-card"><div class="skill-icon">AI</div><div class="skill-name">Generative AI & LLMs</div></div>
-      <div class="skill-card"><div class="skill-icon">AG</div><div class="skill-name">AI Agents & Prompting</div></div>
-      <div class="skill-card"><div class="skill-icon">DV</div><div class="skill-name">Data Visualization</div></div>
-      <div class="skill-card"><div class="skill-icon">GT</div><div class="skill-name">Git & Jupyter</div></div>
-      <div class="skill-card"><div class="skill-icon">WD</div><div class="skill-name">HTML, CSS & JavaScript</div></div>
-    </div>
-  </section>
-
- <!-- EXPERIENCE -->
-<section id="experience">
-  <p class="section-eyebrow reveal">03 — Experience</p>
-  <h2 class="reveal">Internship <em>Experience</em></h2>
-
-  <div class="ep-item reveal">
+<section id="about"><div class="wrap">
+  <p class="big">I care less about a flashy model and more about one you can <strong>explain, evaluate and rely on.</strong> From cyberattack detection to fake account prediction, I build the whole pipeline, not just the notebook.</p>
+  <div class="facts">
     <div>
-      <div class="ep-date">Sep 2024 – Jan 2025</div>
-      <div class="ep-company">Rooman Technologies<br>Bangalore, India</div>
+      <p>My foundation is machine learning, deep learning and data engineering. Day to day I work in Python, SQL, Pandas, NumPy and Scikit-learn: preprocessing, feature engineering, classification and careful model evaluation.</p>
+      <p>Right now I’m growing in generative AI, large language models, prompt engineering and agentic systems, and I like turning complex problems into practical, well-tested solutions.</p>
     </div>
-    <div>
-      <div class="ep-title">AIML Intern</div>
-      <ul class="ep-bullets">
-  <li>Extracted and analyzed data using SQL and Python from multiple sources, built structured data pipelines for preprocessing and model training, and ensured data quality for reliable machine learning workflows.</li>
-  <li>Applied feature engineering techniques to improve model performance, developed and validated classification models using Scikit-learn, and documented transformations and processes for reproducibility.</li>
-    </ul>
+    <dl>
+      <dt>Based in</dt><dd>Paris, France</dd>
+      <dt>Languages</dt><dd>English, French (B1)</dd>
+      <dt>Focus</dt><dd>Data science, ML, GenAI</dd>
+      <dt>Email</dt><dd><a href="mailto:keerthanaabnaidu@gmail.com">keerthanaabnaidu@gmail.com</a></dd>
+      <dt>Profiles</dt><dd><a href="https://linkedin.com/in/keerthanaa-bollipalli/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/keerthanaab2607" target="_blank" rel="noopener">GitHub</a></dd>
+    </dl>
+  </div>
+</div></section>
+<section id="experience" style="padding-top:0"><div class="wrap">
+  <h2 class="sec-title">Where I’ve <em>worked.</em></h2>
+  <div class="tl">
+    <div class="job">
+      <div class="when">Sep 2024 to Jan 2025</div>
+      <h3>AIML Intern</h3>
+      <div class="org">Rooman Technologies, Bangalore</div>
+      <ul>
+        <li>Pulled and analysed data from several sources with SQL and Python, and built structured pipelines for preprocessing and model training.</li>
+        <li>Used feature engineering to improve performance, then built and validated classification models in Scikit-learn.</li>
+        <li>Documented every transformation so results could be reproduced.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="when">Oct 2023 to Dec 2023</div>
+      <h3>Front-end web development intern</h3>
+      <div class="org">Varcons Technologies, Bangalore</div>
+      <ul>
+        <li>Built an interactive resume template in HTML, CSS and JavaScript with a clear, intuitive layout.</li>
+        <li>Made it responsive across devices and improved load time by restructuring the code.</li>
+      </ul>
     </div>
   </div>
+</div></section>
+<section id="projects" style="padding-top:0"><div class="wrap">
+  <h2 class="sec-title">Things I’ve built. Click to open.</h2>
 
-  <div class="ep-item reveal">
-    <div>
-      <div class="ep-date">Oct 2023 – Dec 2023</div>
-      <div class="ep-company">Varcons Technologies<br>Bangalore, India</div>
+  <details class="proj" open>
+    <summary><div><h3>Cyber attack detection</h3><small>Nov 2025 to Mar 2026 · Paris</small></div><span class="plus">+</span></summary>
+    <div class="pbody">
+      <div><h4>The problem</h4><p>Network traffic hides DDoS, malware and intrusion activity. The challenge is telling them apart reliably in a large dataset.</p></div>
+      <div><h4>What I built</h4><p>An end-to-end ML pipeline on 40,000 network-traffic records. I compared Random Forest, Gradient Boosting and XGBoost using cross-validation and GridSearchCV.</p></div>
+      <div><h4>Why it matters</h4><p>Every model was tuned and scored on the same footing, so the comparison is fair and the winner is defensible.</p></div>
+      <div class="pfoot"><div class="chips"><span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span></div><a class="btn ghost" href="https://github.com/keerthanaab2607" target="_blank" rel="noopener">View code on GitHub</a></div>
     </div>
-    <div>
-      <div class="ep-title">Front-End Web Development Intern</div>
-      <ul class="ep-bullets">
-  <li>Developed an interactive resume template using HTML, CSS, and JavaScript, enhancing UI structure and usability while ensuring a clean and intuitive user experience.</li>
-  <li>Implemented responsive layouts for cross-device compatibility, optimized page performance by improving code structure and load time, and enhanced visual design for better user interaction.</li>
-    </ul>
+  </details>
+
+  <details class="proj">
+    <summary><div><h3>Fake account predictor</h3><small>Jan 2025 to Mar 2025 · Bangalore · Published</small></div><span class="plus">+</span></summary>
+    <div class="pbody">
+      <div><h4>The problem</h4><p>Fake social media accounts spread spam and misinformation, and they’re hard to spot by hand at scale.</p></div>
+      <div><h4>What I built</h4><p>An ML and NLP system using SVM and neural networks, with text preprocessing and TF-IDF features, served through a Django app.</p></div>
+      <div><h4>How I judged it</h4><p>Models were evaluated with precision, recall, F1-score and ROC-AUC. The work became a peer-reviewed publication.</p></div>
+      <div class="pfoot"><div class="chips"><span>Python</span><span>SVM</span><span>NLP</span><span>Django</span></div><a class="btn ghost" href="https://github.com/keerthanaab2607" target="_blank" rel="noopener">View code on GitHub</a></div>
     </div>
-  </div>  
-
-</section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <p class="section-eyebrow reveal">04 — Projects</p>
-    <h2 class="reveal">What I've <em>Built</em></h2>
-    <div class="ep-item reveal">
-      <div><div class="ep-date">Nov 2025 – Mar 2026</div><div class="ep-company">Paris, France</div></div>
-      <div>
-        <div class="ep-title">Cyber Security Attack Detection</div>
-        <div class="ep-desc">Built an end-to-end machine learning pipeline to classify DDoS, malware, and intrusion activity using a 40,000-record network-traffic dataset. Compared Random Forest, Gradient Boosting, and XGBoost with cross-validation and GridSearchCV.</div>
-        <div class="ep-tags"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span></div>
-      </div>
-    </div>
-    <div class="ep-item reveal">
-      <div><div class="ep-date">Jan 2025 – Mar 2025</div><div class="ep-company">Bangalore, India</div></div>
-      <div>
-        <div class="ep-title">Fake Account Predictor</div>
-        <div class="ep-desc">Developed an ML/NLP system to identify potentially fake social media accounts using SVM and neural networks. Applied text preprocessing and TF-IDF, then evaluated models with precision, recall, F1-score, and ROC-AUC.</div>
-        <div class="ep-tags"><span class="tag">Python</span><span class="tag">SVM</span><span class="tag">NLP</span><span class="tag">Django</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education">
-    <p class="section-eyebrow reveal">05 — Education</p>
-    <h2 class="reveal">Academic <em>Background</em></h2>
-    <div class="edu-item reveal"><div class="edu-date-col">Oct 2025 – Nov 2027</div><div><div class="edu-degree">MSc in Data Science and AI</div><div class="edu-school">Data Science Tech Institute</div><div class="edu-loc">Paris, France</div></div></div>
-    <div class="edu-item reveal"><div class="edu-date-col">Nov 2021 – May 2025</div><div><div class="edu-degree">B.E. in Computer Science</div><div class="edu-school">Sir M. Visvesvaraya Institute of Technology</div><div class="edu-loc">Bangalore, India</div></div></div>
-    <div class="edu-item reveal"><div class="edu-date-col">Jun 2019 – Jul 2021</div><div><div class="edu-degree">Senior Secondary School</div><div class="edu-school">Sri Chaitanya PU College</div><div class="edu-loc">Bangalore, India</div></div></div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications">
-    <p class="section-eyebrow reveal">06 — Learning & Credentials</p>
-    <h2 class="reveal">Certificates & <em>Training</em></h2>
-    <p class="section-intro reveal">Select an available certificate or badge to view it. Credentials listed on my resume.</p>
-    <div class="cert-grid">
-      <button class="cert-card reveal" type="button" data-title="Design and Build Agentic Systems" data-provider="OpenAI Academy · October 2026" data-image="OpenAI_Agentic_Systems.png" data-file="">
-        <span class="cert-mark">OA</span><span class="cert-copy"><span class="cert-name">Design and Build Agentic Systems</span><span class="cert-provider">OpenAI Academy · October 2026</span><span class="cert-action">View badge <span aria-hidden="true">↗</span></span></span>
-      </button>
-      <button class="cert-card reveal" type="button" data-title="Building with the Claude API" data-provider="Claude Academy · October 2026" data-image="Claude_Academy_Certificate.png" data-file="Claude_Academy_Certificate.pdf">
-        <span class="cert-mark">CA</span><span class="cert-copy"><span class="cert-name">Building with the Claude API</span><span class="cert-provider">Claude Academy</span><span class="cert-action">View certificate <span aria-hidden="true">↗</span></span></span>
-      </button>
-      <button class="cert-card reveal" type="button" data-title="Data Science Job Simulation" data-provider="Forage · BCG · September 2026" data-image="BCG_Data_Science_Certificate.jpg" data-file="BCG_Data_Science_Certificate.pdf">
-        <span class="cert-mark">BCG</span><span class="cert-copy"><span class="cert-name">Data Science Job Simulation</span><span class="cert-provider">Forage · BCG · September 2026</span><span class="cert-action">View certificate <span aria-hidden="true">↗</span></span></span>
-      </button>
-</div>
-  </section>
-
-  <!-- PUBLICATION -->
-  <section id="publications">
-    <p class="section-eyebrow reveal">07 — Research</p>
-    <h2 class="reveal">Research <em>Publication</em></h2>
-    <article class="publication-card reveal">
-      <div class="publication-meta">IJIRT · Volume 11, Issue 12 · May 2025 · Pages 4059–4063</div>
-      <h3>Fake Account Detection in Social Media Using Machine Learning and Django Framework</h3>
-      <p>Research publication on applying machine learning to identify fake social media accounts, with a Django-based implementation.</p>
-      <div class="publication-actions">
-        <a class="btn btn-primary" href="https://ijirt.org/article?manuscript=178231" target="_blank" rel="noopener noreferrer">Read Publication ↗</a>
-        <span class="publication-id">Unique Paper ID: 178231</span>
-      </div>
-    </article>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <p class="section-eyebrow reveal">08 — Contact</p>
-    <h2 class="reveal">Let's <em>Connect</em></h2>
-    <p class="contact-sub reveal">Open to Data Science, Machine Learning, and Generative AI opportunities. If you have a project or role in mind, I would be glad to connect.</p>
-    <div class="contact-grid reveal">
-      <a href="mailto:keerthanaabnaidu@gmail.com" class="contact-cell"><div class="cc-icon">EM</div><span class="cc-label">Email</span><span class="cc-value">keerthanaabnaidu@gmail.com</span></a>
-      <a href="https://linkedin.com/in/keerthanaa-bollipalli/" target="_blank" class="contact-cell"><div class="cc-icon">in</div><span class="cc-label">LinkedIn</span><span class="cc-value">keerthanaa-bollipalli</span></a>
-      <a href="https://github.com/keerthanaab2607" target="_blank" class="contact-cell"><div class="cc-icon">GH</div><span class="cc-label">GitHub</span><span class="cc-value">keerthanaab2607</span></a>
-      <a href="tel:+330749059131" class="contact-cell"><div class="cc-icon">PH</div><span class="cc-label">Phone</span><span class="cc-value">+33 0749059131</span></a>
-    </div>
-    <div class="reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-      <a href="mailto:keerthanaabnaidu@gmail.com" class="btn btn-primary">Hire Me</a>
-      <a href="Keerthanaa_Bollipalli_CV.pdf" download="Keerthanaa_Bollipalli_Resume.pdf" class="btn btn-outline">Download Resume ↓</a>
-    </div>
-  </section>
-
-  <div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
-    <div class="cert-modal-panel">
-      <div class="cert-modal-head">
-        <div><h3 class="cert-modal-title" id="certModalTitle">Certificate</h3><p class="cert-modal-provider" id="certModalProvider"></p></div>
-        <button class="cert-modal-close" type="button" id="certModalClose" aria-label="Close certificate viewer">×</button>
-      </div>
-      <img class="cert-modal-image" id="certModalImage" alt="Certificate preview" />
-      <div class="cert-modal-actions" id="certModalActions" style="display:none;margin-top:1rem;text-align:center"><a class="btn btn-primary" id="certPdfLink" href="#" target="_blank" rel="noopener noreferrer">Open PDF certificate ↗</a></div>
-      <div class="cert-modal-placeholder" id="certModalPlaceholder"><strong>Certificate image not added yet</strong>The card is ready for the certificate image. Add the image to the indicated file path, or send the certificate image so the portfolio can be updated.</div>
-    </div>
+  </details>
+</div></section>
+<section class="skills" id="skills"><div class="wrap">
+  <h2 class="sec-title">The toolkit I reach for first.</h2>
+  <div class="row"><h3>Data and code</h3><div class="chips"><span>Python</span><span>SQL</span><span>Pandas</span><span>NumPy</span><span>Git</span><span>Jupyter</span></div></div>
+  <div class="row"><h3>Machine learning</h3><div class="chips"><span>Scikit-learn</span><span>Random Forest</span><span>Gradient Boosting</span><span>XGBoost</span><span>SVM</span><span>Feature engineering</span><span>Cross-validation</span><span>GridSearchCV</span></div></div>
+  <div class="row"><h3>NLP and GenAI</h3><div class="chips"><span>NLP and TF-IDF</span><span>LLMs</span><span>Prompt engineering</span><span>AI agents</span><span>LLM APIs</span></div></div>
+  <div class="row"><h3>Visualisation and web</h3><div class="chips"><span>Matplotlib</span><span>Seaborn</span><span>Django</span><span>HTML, CSS, JavaScript</span></div></div>
+</div></section>
+<section class="pub" id="research"><div class="wrap">
+  <div>
+    <h2>Published research.</h2>
+    <p class="meta">IJIRT, Volume 11, Issue 12<br>May 2025, pages 4059 to 4063<br>Paper ID 178231</p>
   </div>
+  <div>
+    <h3>Fake account detection in social media using machine learning and the Django framework</h3>
+    <p>How machine learning can identify fake social media accounts, with a working Django implementation behind it.</p>
+    <a class="btn" href="https://ijirt.org/article?manuscript=178231" target="_blank" rel="noopener">Read the publication</a>
+  </div>
+</div></section>
+<section id="credentials"><div class="wrap">
+  <h2 class="sec-title">Always learning.</h2>
+  <div class="cred">
+    <a href="certificates/agentic-systems.pdf" target="_blank" rel="noopener"><span class="org">OpenAI Academy</span><b>Design and build agentic systems</b><small>October 2026</small><br><span class="view">View certificate</span></a>
+    <a href="certificates/llm-api-course.pdf" target="_blank" rel="noopener"><span class="org">Claude Academy</span><b>Building with the Claude API</b><small>Certificate</small><br><span class="view">View certificate</span></a>
+    <a href="certificates/bcg-data-science.pdf" target="_blank" rel="noopener"><span class="org">Forage and BCG</span><b>Data science job simulation</b><small>September 2026</small><br><span class="view">View certificate</span></a>
+    <a href="certificates/genai-skill-badge.pdf" target="_blank" rel="noopener"><span class="org">Google</span><b>Generative AI skill badge</b><small>Skill badge</small><br><span class="view">View certificate</span></a>
+  </div>
+</div></section>
+<section style="padding-top:0"><div class="wrap">
+  <h2 class="sec-title">School, in order.</h2>
+  <div class="edu">
+    <div><span class="when">Oct 2025 to Nov 2027</span><b>MSc in Data Science and AI</b><span>Data Science Tech Institute, Paris</span></div>
+    <div><span class="when">Nov 2021 to May 2025</span><b>B.E. in Computer Science</b><span>Sir M. Visvesvaraya Institute of Technology, Bangalore</span></div>
+    <div><span class="when">Jun 2019 to Jul 2021</span><b>Senior secondary school</b><span>Sri Chaitanya PU College, Bangalore</span></div>
+  </div>
+</div></section>
+<section class="contact" id="contact"><div class="wrap">
+  <h2 class="sec-title">Have a role or project in mind?</h2>
+  <a class="mail" href="mailto:keerthanaabnaidu@gmail.com">keerthanaabnaidu@gmail.com</a>
+  <div class="socials">
+    <a class="btn fill" href="Keerthanaa_Bollipalli_CV.pdf" download>Download CV</a>
+    <a class="btn ghost" href="https://linkedin.com/in/keerthanaa-bollipalli/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn ghost" href="https://github.com/keerthanaab2607" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></section>
 
-  <footer><p>© 2026 Keerthanaa Bollipalli · Data Science & AI · Paris, France</p></footer>
+<footer>© 2026 Keerthanaa Bollipalli. Data science and AI, Paris.</footer>
 
-  <script>
-    const bar=document.getElementById('progress-bar');
-    window.addEventListener('scroll',()=>{bar.style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%'});
-    const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*70)})},{threshold:0.08});
-    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-    const certModal = document.getElementById('certModal');
-    const certModalTitle = document.getElementById('certModalTitle');
-    const certModalProvider = document.getElementById('certModalProvider');
-    const certModalImage = document.getElementById('certModalImage');
-    const certModalPlaceholder = document.getElementById('certModalPlaceholder');
-    const certModalActions = document.getElementById('certModalActions');
-    const certPdfLink = document.getElementById('certPdfLink');
-    const closeCertModal = () => { certModal.classList.remove('open'); document.body.style.overflow = ''; certModalImage.removeAttribute('src'); certModalActions.style.display = 'none'; certPdfLink.removeAttribute('href'); };
-    document.querySelectorAll('.cert-card[data-image]').forEach(card => {
-      card.addEventListener('click', () => {
-        certModalTitle.textContent = card.dataset.title;
-        certModalProvider.textContent = card.dataset.provider;
-        if (card.dataset.file) { certPdfLink.href = card.dataset.file; certModalActions.style.display = 'block'; } else { certModalActions.style.display = 'none'; }
-        certModalPlaceholder.style.display = 'none';
-        certModalImage.style.display = 'block';
-        certModalImage.src = card.dataset.image;
-        certModalImage.onerror = () => { certModalImage.style.display = 'none'; certModalPlaceholder.style.display = 'block'; };
-        certModal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        document.getElementById('certModalClose').focus();
-      });
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// Theme toggle
+document.getElementById('tgl').addEventListener('click',function(){
+  var d=document.documentElement,n=d.dataset.theme==='dark'?'light':'dark';
+  d.dataset.theme=n;try{localStorage.setItem('theme',n)}catch(e){}
+});
+// Hero 3D: a slowly turning data-mesh that follows the cursor. Skipped if WebGL or the CDN is unavailable.
+(function(){
+  var hero=document.querySelector('.hero'),cv=document.getElementById('gl'),pt=document.querySelector('.portrait');
+  if(!window.THREE||!cv)return;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,r;
+  try{r=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true})}catch(e){return}
+  r.setPixelRatio(Math.min(devicePixelRatio,2));
+  var sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(45,1,.1,50),g=new THREE.Group();
+  cam.position.z=7;sc.add(g);
+  function mk(rad,det,op){
+    var geo=new THREE.IcosahedronGeometry(rad,det),o=new THREE.Group();
+    o.add(new THREE.LineSegments(new THREE.WireframeGeometry(geo),new THREE.LineBasicMaterial({transparent:true,opacity:op})),
+          new THREE.Points(geo,new THREE.PointsMaterial({size:.07,transparent:true,opacity:Math.min(1,op+.35)})));
+    return o;
+  }
+  var a=mk(2.1,1,.3),b=mk(1.25,0,.5);g.add(a,b);
+  function paint(){
+    var cs=getComputedStyle(document.documentElement);
+    [[a,'--g1'],[b,'--g2']].forEach(function(x){
+      var c=new THREE.Color(cs.getPropertyValue(x[1]).trim());
+      x[0].children.forEach(function(m){m.material.color.copy(c)});
     });
-    document.getElementById('certModalClose').addEventListener('click', closeCertModal);
-    certModal.addEventListener('click', event => { if (event.target === certModal) closeCertModal(); });
-    document.addEventListener('keydown', event => { if (event.key === 'Escape' && certModal.classList.contains('open')) closeCertModal(); });
-
-
-    // Lightweight animated network background (no external libraries).
-    const networkCanvas = document.getElementById('network-bg');
-    if (networkCanvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      const ctx = networkCanvas.getContext('2d');
-      let points = [];
-      let rafId;
-      const resizeNetwork = () => {
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        networkCanvas.width = Math.floor(window.innerWidth * dpr);
-        networkCanvas.height = Math.floor(window.innerHeight * dpr);
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        const count = Math.min(75, Math.max(28, Math.floor(window.innerWidth / 18)));
-        points = Array.from({length: count}, () => ({
-          x: Math.random() * window.innerWidth,
-          y: Math.random() * window.innerHeight,
-          vx: (Math.random() - .5) * .22,
-          vy: (Math.random() - .5) * .22
-        }));
-      };
-      const drawNetwork = () => {
-        ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-        for (let i = 0; i < points.length; i++) {
-          const p = points[i];
-          p.x += p.vx; p.y += p.vy;
-          if (p.x < 0 || p.x > window.innerWidth) p.vx *= -1;
-          if (p.y < 0 || p.y > window.innerHeight) p.vy *= -1;
-          for (let j = i + 1; j < points.length; j++) {
-            const q = points[j];
-            const dx = p.x - q.x, dy = p.y - q.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            if (distance < 135) {
-              ctx.strokeStyle = `rgba(105, 160, 255, ${.16 * (1 - distance / 135)})`;
-              ctx.lineWidth = 1;
-              ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
-            }
-          }
-          ctx.fillStyle = 'rgba(120, 175, 255, .48)';
-          ctx.beginPath(); ctx.arc(p.x, p.y, 1.35, 0, Math.PI * 2); ctx.fill();
-        }
-        rafId = requestAnimationFrame(drawNetwork);
-      };
-      resizeNetwork();
-      drawNetwork();
-      window.addEventListener('resize', resizeNetwork, {passive: true});
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) cancelAnimationFrame(rafId);
-        else drawNetwork();
-      });
-    }
-
-    const seeProjectsBtn = document.getElementById('seeProjectsBtn');
-    if (seeProjectsBtn) {
-      seeProjectsBtn.addEventListener('click', () => {
-        document.getElementById('projects')?.scrollIntoView({behavior: 'smooth'});
-      });
-    }
-
-  </script>
+    if(reduce)r.render(sc,cam);
+  }
+  function size(){
+    var w=hero.clientWidth,h=hero.clientHeight,wide=w>900;
+    r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();
+    g.position.set(wide?2.9:0,wide?0:1.4,0);g.scale.setScalar(wide?1:.7);
+    if(reduce)r.render(sc,cam);
+  }
+  paint();size();addEventListener('resize',size);
+  new MutationObserver(paint).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+  var mx=0,my=0,tx=0,ty=0,on=true;
+  hero.addEventListener('pointermove',function(e){
+    var q=hero.getBoundingClientRect();mx=(e.clientX-q.left)/q.width-.5;my=(e.clientY-q.top)/q.height-.5;
+    if(!reduce&&e.pointerType==='mouse'&&pt){pt.style.setProperty('--ry',(mx*10)+'deg');pt.style.setProperty('--rx',(-my*8)+'deg')}
+  });
+  hero.addEventListener('pointerleave',function(){mx=my=0;if(pt){pt.style.setProperty('--ry','0deg');pt.style.setProperty('--rx','0deg')}});
+  new IntersectionObserver(function(e){on=e[0].isIntersecting}).observe(hero);
+  function frame(t){
+    requestAnimationFrame(frame);if(!on)return;
+    tx+=(mx-tx)*.05;ty+=(my-ty)*.05;
+    a.rotation.y=t*.00015+tx*1.2;a.rotation.x=t*.0001+ty;
+    b.rotation.y=-t*.0003;b.rotation.x=t*.00018;
+    r.render(sc,cam);
+  }
+  if(!reduce)requestAnimationFrame(frame);
+})();
+</script>
+<script>
+// One load moment: the name resolves out of noise, like a model converging.
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var chars='abcdefghijklmnopqrstuvwxyz01';
+  [['n1',0],['n2',350]].forEach(function(p){
+    var el=document.getElementById(p[0]),txt=el.textContent,t0=performance.now()+p[1];
+    (function tick(now){
+      var k=Math.max(0,(now-t0)/900),out='';
+      for(var i=0;i<txt.length;i++){
+        out+= (i/txt.length<k)?txt[i]:chars[Math.floor(Math.random()*chars.length)];
+      }
+      el.textContent=k>=1?txt:out;
+      if(k<1) requestAnimationFrame(tick);
+    })(performance.now());
+  });
+})();
+</script>
 </body>
 </html>
